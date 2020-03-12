@@ -1,0 +1,55 @@
+.card{
+    margin-right: 7%;
+    /* margin-left:4%; */
+    margin-bottom: 2%;
+    
+    width:100%;
+    
+}
+.card-body{
+    width: 100%;
+}
+.card-title{
+    font: weight 90;
+    color: cornflowerblue;
+}
+.btn-secondary{
+    background-color: rgb(205, 213, 219);
+}
+.card-img-top{
+    width:25%;
+    height:25%
+}
+.manager{
+    display: flex;
+    padding-top: 2%;
+}
+.contact{
+    margin-left: 10%;
+    justify-content: center;
+}
+.message{
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 5%;
+}
+.name{
+    font-size: large;
+    color: darkblue;
+}
+.profile-name{
+    padding-top: 7%;
+}
+
+.btn{margin-bottom:15px;}
+
+.modal.fade{
+    margin: 2%;
+    border: 8px;
+}
+
+@media (max-width:60%){.modal-dialog.modal-dialog-slideout {width: 80%}}
+.modal-dialog-slideout {min-height: 100%; margin: 1 1 1 auto;background: rgb(195, 204, 243);}
+.modal.fade .modal-dialog.modal-dialog-slideout {-webkit-transform: translate(100%,0);transform: translate(100%,0);}
+.modal.fade.show .modal-dialog.modal-dialog-slideout {-webkit-transform: translate(0,0);transform: translate(0,0);flex-flow: column;}
+.modal-dialog-slideout .modal-content{border: 0;}

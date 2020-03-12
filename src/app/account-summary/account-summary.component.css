@@ -1,0 +1,22 @@
+.btn-link{
+    text-decoration: none;
+    color:#052649;
+}
+.accordion{
+    /* margin-left: 5%; */
+    margin-right:2%;
+    margin-bottom: 5%;
+    width:100%;box-shadow: 0 0 15px rgb(196, 225, 253);
+    
+}
+.btn-link{
+    font-size: 20px;
+    font-weight: lighter;
+    color: black;
+}
+.dropdown-toggle{
+    float:right;
+}
+.btn-link{
+    float: left;
+}

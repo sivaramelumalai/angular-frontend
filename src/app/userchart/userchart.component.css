@@ -1,0 +1,9 @@
+#chart{
+    border-color: black;
+    border: 1px;
+    box-shadow: 0 0 15px rgb(196, 225, 253);
+    position: -webkit-sticky;
+    position: sticky;
+    top:14%;
+
+}

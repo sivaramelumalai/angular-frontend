@@ -1,0 +1,28 @@
+
+.form-row{
+    margin-left: 4%;
+    margin-right: 4%;
+}
+.btn-outline-primary{
+    float:right;
+    box-shadow: 0 0 10px gray;
+}
+.btn-outline-warning{
+    float:right;
+    box-shadow: 0 0 10px gray;
+}
+select{
+    font-family: 'FontAwesome' , 'TATSanaChon';
+}
+.acc-options{
+    padding:2% ;
+}
+option{
+    padding: 2%;
+}
+
+
+
+
+
+

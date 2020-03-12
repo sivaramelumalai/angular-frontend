@@ -1,0 +1,66 @@
+.btn-outline-primary{
+    margin-left:10px;
+    margin-right: 10px;
+    right:0;
+    position: absolute;
+    color: antiquewhite;
+    
+}
+a{
+    color: antiquewhite;
+}
+.btn-primary{
+    margin-left:10px;
+    margin-right: 10px;
+    left:75%;
+    position: absolute;
+
+}
+.navbar-brand{
+    color: white;
+}
+.navbar{
+    height:30%;
+    position: sticky;
+
+
+}
+.navbar-nav a {
+    color: antiquewhite;
+    padding-left:10%;
+    padding-right:10%;
+    
+}
+.navbar-nav a:hover{
+    color: 
+    rgba(172, 158, 158, 0.7);
+}
+
+#navbarDropdownMenuLink{
+    color:white;
+}
+.nav-item{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.navbar-nav :hover{
+    color: aqua;
+}
+.nav-item a{
+    font-size:20px;
+}
+.dropdown a{
+    font-size: 18px;
+}
+.bg-light{
+    background-image: linear-gradient(rgb(116, 145, 240), rgb(34, 68, 179));
+}
+.bg-dark{
+    background-image: linear-gradient(rgb(12, 41, 138), rgb(8, 23, 71));
+}
+.dropdown-menu a {
+    color: black;
+}
+.dropdown-menu{
+    border-radius: 10%;
+}

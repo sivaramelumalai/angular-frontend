@@ -1,0 +1,58 @@
+<p>Bank Accounts </p>
+<div class="well">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Account</th>
+          <th>Id</th>
+          <th>Acc_no.</th>
+          <th>Acc._type</th>
+          <th>Balance</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor = "let account of accounts">
+          <td><a href=''>{{account.name}}</a></td>
+          <td>{{account.user_id}}</td>
+          <td>{{account.account_no}}</td>
+          <td>{{account.acc_type}}</td>
+          <td>₹ {{account.amount}}</td>
+          
+        </tr>
+              </tbody>
+    </table>
+</div>
+<p>Credit Card </p>
+<div class="well">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Account</th>
+          <th>Present balance</th>
+          <th>Available balance</th>
+          <th>Acc.type</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>account 1</td>
+          <td>20000</td>
+          <td>20000</td>
+          <td>savings</td>
+          
+        </tr>
+        <tr>
+            <td>account 2</td>
+            <td>20000</td>
+            <td>20000</td>
+            <td>current</td>
+        </tr>
+        <tr>
+            <td>account 3</td>
+            <td>20000</td>
+            <td>20000</td>
+            <td>fd</td>  
+        </tr>
+              </tbody>
+    </table>
+</div>

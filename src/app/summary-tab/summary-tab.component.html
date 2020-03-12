@@ -1,0 +1,11 @@
+<div *ngIf = "checkCustomer()">
+    <tab-bar></tab-bar>
+    <div class= "summary-tab"> 
+        <app-account-summary class= "summary" ></app-account-summary>
+        <app-profile class = "profile"></app-profile>  
+    </div>
+</div>
+<div *ngIf = "checkBanker()">
+    <app-bankers-view-tab></app-bankers-view-tab>
+   
+</div>

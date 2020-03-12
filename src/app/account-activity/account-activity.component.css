@@ -1,0 +1,44 @@
+.well{
+    margin-left: 4%;
+    margin-right: 4%;
+}
+.topic{
+    margin-left: 4%;
+}
+th{
+    color: grey;
+}
+.accordion{
+    margin-left: 4%;
+    margin-right: 4%;
+    padding-bottom: 2%;
+
+}
+.transaction-credit{
+    color: green;
+    font-weight: bold;
+}
+.transaction-debit{
+    color:rgb(173, 8, 8);
+    font-weight: bold;
+}
+.transaction-self{
+    color:rgb(6, 113, 253);
+    font-weight: bold;
+}
+.activity{
+    width: 60%;
+}
+.card{
+    margin-right: 5%;
+    margin-top: 10%;
+    width:160%;
+    box-shadow: 0 0 15px rgb(196, 225, 253);
+    position: -webkit-sticky;
+    position: sticky;
+    top: 5%;
+}
+.account-activity{
+    display: flex;
+    box-shadow: 0 0 15px rgb(196, 225, 253);
+}

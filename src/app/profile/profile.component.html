@@ -1,0 +1,62 @@
+<div class="card" >
+        <div class="card-body" >
+          <h6 class="card-title">Profile & Settings</h6>
+          <h4 class="card-subtitle mb-2 name">{{profile[0].name}}</h4>
+          <p class="card-text">Last session summary<br/>
+                Jan 17, 2020 at 8:25 AM ET</p>
+      
+          <a href="#" class="btn btn-secondary"  data-toggle="modal" data-target="#exampleModal3">Full Profile</a>
+        </div>
+</div>
+
+<div class="modal fade" id="exampleModal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel3" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-slideout" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <img src="../../assets/images/cbo-relationship-manager-icon.png" class="card-img-top" >
+        <h4 class="modal-title profile-name" id="exampleModalLabel">{{profile[0].name}}</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">×</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p> Email : {{profile[0].email}}</p>
+        <p> User ID : {{profile[0].id}}  </p>
+        <p> Phone number : {{profile[0].phone_number}}</p>
+        <h3>Accounts</h3>
+        <div class="card-body" *ngFor = "let profiles of profile"  >
+          <h4 class="card-subtitle mb-2 name">Type of account : {{profiles.acc_type}}</h4>
+          <h6 class="card-title">Account number : {{profiles.account_no}}</h6>
+          <p class="card-text">Current balance : ₹{{profiles.amount}}</p>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Make changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="card" >
+  <div class ="manager">
+      <img src="../../assets/images/cbo-relationship-manager-icon.png" class="card-img-top" >
+      <div>
+        <h6 class="card-subtitle mb-2 text-muted">Chase business services:</h6>
+        <h6 class="card-subtitle mb-2 text-muted">800-242-7338</h6>
+        <br/>
+        <br/>
+        <h6 class="card-subtitle mb-2 text-muted">Business online technical support:</h6>
+        <h6 class="card-subtitle mb-2 text-muted"> 877-242-7372, option 3</h6>
+      </div>
+  </div>
+  <div class="contact">
+    <h6>
+        For additional support, contact your .
+    </h6>
+    <a href="">contact your Business Relationship Manager</a>
+  </div>
+  <div class="message">
+      <p>See an error message on your card reader? You can resolve it with our<p> <a href="">error message help</a>
+  </div>
+</div>

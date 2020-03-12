@@ -1,0 +1,9 @@
+.card-header{
+    background-image: linear-gradient(rgb(76, 114, 240), rgb(73, 54, 179));
+    color :white;
+}
+.login-form{
+    margin-top: 9%;
+    padding-left: 2%;
+    padding-right: 2%;
+}

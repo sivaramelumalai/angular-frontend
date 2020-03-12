@@ -1,0 +1,51 @@
+<tab-bar></tab-bar>
+<div class="account-activity">
+  <div class = "activity">
+    <h5 class  = "topic">Your overall transactions </h5>
+          <div class="well">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Date</th>
+                  <th>From Acc.</th>
+                  <th>To Acc.</th>
+                  <th>Amount</th>
+                  <th>Transaction Type</th>
+                  
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor = "let transaction of userTransactions">
+                  <td>{{transaction.date}}</td>
+                  <td>{{transaction.from_acc_no}}</td>
+                  <td>{{transaction.to_acc_no}}</td>
+                  <td class ="transaction-debit" *ngIf = "transaction.type == 'debit'"> - ₹ {{transaction.amount}}</td>
+                  <td class ="transaction-self" *ngIf = "transaction.type == 'self'">₹ {{transaction.amount}}</td>
+                  <td class ="transaction-credit" *ngIf = "transaction.type == 'credit'"> + ₹ {{transaction.amount}}</td>
+                  <td>{{transaction.transaction_type}}</td>
+        
+                  
+                </tr>
+              </tbody>
+            </table>
+            <small class = "btn btn-secondary"> more</small>
+          </div>
+  
+  </div>
+  <div>
+  <div *ngFor = "let account of accounts">
+    
+    <div class="card" >
+      <h5 class="card-header">{{account.name}}</h5>
+      <div class="card-body">
+        <p class="card-text">{{account.acc_type}} account ({{account.account_no}})</p>
+        <h5 class="card-title">The current balance : ₹ {{account.amount}} </h5>
+      </div>
+    </div>
+    </div>
+  </div>
+    
+        
+
+
+</div>

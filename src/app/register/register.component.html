@@ -1,0 +1,63 @@
+<main class="login-form">
+        <div class="cotainer">
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="card">
+                        <div class="card-header">Create a user account </div>
+                        <div class="card-body">
+                            <form action="" method="">
+                                    <div class="form-group row">
+                                            <label for="password" class="col-md-4 col-form-label text-md-right">Username</label>
+                                            <div class="col-md-6">
+                                                <input [(ngModel)] = "userRegisterData.name" type="text" placeholder="Name please" class="form-control" name="name" required>
+                                            </div>
+                                        </div>
+                                <div class="form-group row">
+                                    <label for="email_address" class="col-md-4 col-form-label text-md-right">E-Mail</label>
+                                    <div class="col-md-6">
+                                        <input type="text" [(ngModel)] = "userRegisterData.email" placeholder="email" class="form-control" name="email" required autofocus>
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <label for="email_address" class="col-md-4 col-form-label text-md-right">Contact number</label>
+                                    <div class="col-md-6">
+                                        <input type="text" [(ngModel)] = "userRegisterData.phone_no" placeholder="phone number" class="form-control" name="phone_no" required autofocus>
+                                    </div>
+                                </div>
+    
+                                <div class="form-group row">
+                                    <label for="password" class="col-md-4 col-form-label text-md-right">Password</label>
+                                    <div class="col-md-6">
+                                        <input type="password" [(ngModel)] = "userRegisterData.password" placeholder="enter a unique password"  class="form-control" name="password" required>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="email_address" class="col-md-4 col-form-label text-md-right">Account preferences</label>
+                                    <div class="col-md-6">
+        
+                                        <select class="form-control" [(ngModel)] = "userRegisterData.account_preferences" name = 'account_preferences' placeholder="account_preferences" class="form-control" required autofocus>
+                                            <option class="acc-options">current</option>
+                                            <option class="acc-options">savings</option>
+                                            <option class="acc-options">Both</option>
+                                         </select>
+                                    </div>
+                                </div>
+    
+                                <div class="col-md-6 offset-md-4">
+                                    <button type="submit" (click)= "createUser()" class="btn btn-primary">
+                                        Register
+                                    </button>
+                                    
+                                </div>
+                        
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    
+    </main>
+    
+

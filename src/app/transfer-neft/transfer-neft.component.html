@@ -1,0 +1,71 @@
+<form>
+        <div class="form-row">
+            <div class="col-md-4 mb-3">
+                <label for="validationServer013">Transfer from</label>
+                <input type="text" class="form-control " [(ngModel)] = "neftTransactionDet.from_acc_no" name = "from_acc_no" id="validationServer013" placeholder="From acc.no" required>
+            </div>
+        </div>
+        <div class="col-md-4 mb-3">
+            <label for="validationServerUsername33">Amount</label>
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroupPrepend33">₹</span>
+              </div>
+              <input type="text" class="form-control "[(ngModel)] ="neftTransactionDet.amount" name = 'amount' id="validationServerUsername33" placeholder="amount"
+                 required>
+              
+            </div>
+          </div>
+        <div class="form-row">
+                <div class="col-md-4 mb-3">
+                    <label for="validationServer013">Transfer to </label>
+                    <input type="text" class="form-control "[(ngModel)] = "neftTransactionDet.to_acc_no" name  = "to_acc_no"id="validationServer013" placeholder="To acc.no" required>
+                </div>
+                <div class="col-md-4 mb-3">
+                        <label for="validationServer013">Bank Name</label>
+                        <input type="text" class="form-control " id="validationServer013" placeholder="Bank name" required>
+                </div>
+                <div class="col-md-4 mb-3">
+                        <label for="validationServer013">Branch</label>
+                        <input type="text" class="form-control " id="validationServer013" placeholder="Branch name" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-md-4 mb-3">
+                    <label for="validationServer013">Username</label>
+                    <input type="text" class="form-control " id="validationServer013" placeholder="recepient name" required>
+                </div>
+                <div class="col-md-4 mb-3">
+                        <label for="validationServer013">IFSC code </label>
+                        <input type="text" class="form-control " id="validationServer013" placeholder="ifsc" required>
+                </div>
+                <div class="col-md-4 mb-3">
+                        <label for="validationServer013">Memo</label>
+                        <input type="text" class="form-control " id="validationServer013" placeholder="memo" required>
+                </div>
+            </div>
+        
+        <button class="btn btn-outline-primary"(click) = "neftTransfer()" type="submit">Transfer</button>
+    </form>
+
+
+
+
+<!-- <div class="col-md-4 mb-3">
+  <label for="validationServerUsername33">Amount</label>
+  <div class="input-group">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="inputGroupPrepend33">₹</span>
+    </div>
+    <input type="text" class="form-control " id="validationServerUsername33" placeholder="amount"
+       required>
+    
+  </div>
+</div>
+</div> -->
+
+<!-- <div class="col-md-4 mb-3">
+        <label for="validationServer023">Transfer to</label>
+        <input type="text" class="form-control " id="validationServer023" placeholder="To acc.no"
+           required>
+    </div> -->

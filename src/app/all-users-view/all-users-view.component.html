@@ -1,0 +1,53 @@
+<app-bankers-view-tab></app-bankers-view-tab>
+<p class  = "topic">Savings Accounts </p>
+<div class="well">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Account-holder</th>
+          <th>Id</th>
+          <th>Account-no.</th>
+          <th>Email</th>
+          <th>Acc.type</th>
+          <th>Balance</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor = "let user of savingUsers">
+          <td><a href=''>{{user.name}}</a></td>
+          <td>{{user.id}}</td>
+          <td>{{user.account_no}}</td>
+          <td>{{user.email}}</td>
+          <td>{{user.acc_type}}</td>
+          <td>₹ {{user.amount}}</td>
+          
+        </tr>
+      </tbody>
+    </table>
+</div>
+<p class  = "topic">Current account </p>
+<div class="well">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Account-holder</th>
+          <th>Id</th>
+          <th>Account-no.</th>
+          <th>Email</th>
+          <th>Acc.type</th>
+          <th>Balance</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor = "let user of currentUsers">
+          <td><a href=''>{{user.name}}</a></td>
+          <td>{{user.id}}</td>
+          <td>{{user.account_no}}</td>
+          <td>{{user.email}}</td>
+          <td>{{user.acc_type}}</td>
+          <td>₹ {{user.amount}}</td>
+          
+        </tr>
+      </tbody>
+    </table>
+</div>

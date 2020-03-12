@@ -1,0 +1,214 @@
+<app-bankers-view-tab></app-bankers-view-tab>
+<h3>Accounts creation still in pending</h3>
+<hr>
+<div *ngFor = "let account of accounts">
+    <div class="accordion"   role="tablist">
+        <div class="card">
+          <div class="card-header" role="tab" id="headingOne">
+            <div class="card-type-icon with-border">{{account.id}}</div>
+                <a data-toggle="collapse" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    {{account.name}}
+                </a>
+                <a data-toggle="collapse" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    {{account.account_preferences}}
+                </a>     
+            </div>
+          <div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne">
+            <div class="card-body p-0">
+                <div class="create" *ngIf = "account.account_preferences === 'Both'">
+                    <div>
+                        <div>savings Account</div>
+                        <form action="" class="form" method="">
+                            <div class="form-group row">
+                                <label for="password" class="col-md-4 col-form-label text-md-right">User Id</label>
+                                <div class="col-md-6">
+                                    <input type="text" [(ngModel)]="accountDet.id" placeholder="enter the id"  class="form-control" name="id" required>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="email_address" class="col-md-4 col-form-label text-md-right">Account Number</label>
+                                <div class="col-md-6">
+                                    <input type="text" [(ngModel)]="accountDet.acc_no" placeholder="account_no" class="form-control" name="account_no" required autofocus>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="password" class="col-md-4 col-form-label text-md-right">Type</label>
+                                <div class="col-md-6">
+                                    <input type="text"  [(ngModel)]="accountDet.type"  value="savings" placeholder="type please" class="form-control" name="type" required>
+                                </div>
+                            </div>
+    
+                        <div class="form-group row">
+                            <label for="email_address" class="col-md-4 col-form-label text-md-right">Rate of interest</label>
+                            <div class="col-md-6">
+                                <select class="form-control"  [(ngModel)]="accountDet.roi" name = 'Rate of interest' placeholder="Rate of interest" class="form-control" required autofocus>
+                                    <option class="acc-options">6.0</option>
+                                    <option class="acc-options">5.7</option>
+                                 </select>
+                            </div>
+                        </div>
+    
+                        <div class="form-group row">
+                            <label for="password" class="col-md-4 col-form-label text-md-right">Principle Amount</label>
+                            <div class="col-md-6">
+                                <input type="amount" placeholder="enter the amount"  [(ngModel)]="accountDet.amount" class="form-control" name="amount" required>
+                            </div>
+                        </div>
+    
+                        <div class="col-md-6 offset-md-4">
+                            <button type="submit" (click)="createAccount()" class="btn btn-primary">
+                                Create
+                            </button>
+                        </div>
+                </form>
+                    </div>  
+                    <div>
+                        <div>Current Account</div>
+                        <form action="" class="form" method="">
+                            <div class="form-group row">
+                                <label for="password" class="col-md-4 col-form-label text-md-right">User Id</label>
+                                <div class="col-md-6">
+                                    <input type="text" [(ngModel)]="accountDet.id" placeholder="enter the id"  class="form-control" name="id" required>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="email_address" class="col-md-4 col-form-label text-md-right">Account Number</label>
+                                <div class="col-md-6">
+                                    <input type="text" [(ngModel)]="accountDet.acc_no" placeholder="account_no" class="form-control" name="account_no" required autofocus>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="password" class="col-md-4 col-form-label text-md-right">Type</label>
+                                <div class="col-md-6">
+                                    <input type="text" [(ngModel)]="accountDet.type"  placeholder="type please" value="current" class="form-control" name="type" required>
+                                </div>
+                            </div>
+    
+                        <div class="form-group row">
+                            <label for="email_address" class="col-md-4 col-form-label text-md-right">Rate of interest</label>
+                            <div class="col-md-6">
+                                <select class="form-control" [(ngModel)]="accountDet.roi"  name = 'Rate of interest' placeholder="Rate of interest" class="form-control" required autofocus>
+                                    <option class="acc-options">6.0</option>
+                                    <option class="acc-options">5.7</option>
+                                 </select>
+                            </div>
+                        </div>
+    
+                        <div class="form-group row">
+                            <label for="amount" class="col-md-4 col-form-label text-md-right">Principle Amount</label>
+                            <div class="col-md-6">
+                                <input type="amount" [(ngModel)]="accountDet.amount"  placeholder="enter the amount"  class="form-control" name="amount" required>
+                            </div>
+                        </div>
+    
+                        <div class="col-md-6 offset-md-4">
+                            <button type="submit" (click)="createAccount()" class="btn btn-primary">
+                                Create
+                            </button>
+                            
+                        </div>
+                
+                </form>
+                    </div>
+                    
+                </div>
+                <div class="create" *ngIf = "account.account_preferences === 'current'">
+                    <div>Current account</div>
+                    <form action="" class="form" method="">
+                        <div class="form-group row">
+                            <label for="password" class="col-md-4 col-form-label text-md-right">User Id</label>
+                            <div class="col-md-6">
+                                <input type="text" [(ngModel)]="accountDet.id" placeholder="enter the id"  class="form-control" name="id" required>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="email_address" class="col-md-4 col-form-label text-md-right">Account Number</label>
+                            <div class="col-md-6">
+                                <input type="text" [(ngModel)]="accountDet.acc_no"   placeholder="account_no" class="form-control" name="account_no" required autofocus>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="type" class="col-md-4 col-form-label text-md-right">Type</label>
+                            <div class="col-md-6">
+                                <input type="text" [(ngModel)]="accountDet.type"  placeholder="type please" value="current" class="form-control" name="type" required>
+                            </div>
+                        </div>
+
+                    <div class="form-group row">
+                        <label for="email_address" class="col-md-4 col-form-label text-md-right">Rate of interest</label>
+                        <div class="col-md-6">
+                            <select class="form-control"  [(ngModel)]="accountDet.roi"  name = 'Rate of interest' placeholder="Rate of interest" class="form-control" required autofocus>
+                                <option class="acc-options">6.0</option>
+                                <option class="acc-options">5.7</option>
+                             </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="password" class="col-md-4 col-form-label text-md-right">Principle Amount</label>
+                        <div class="col-md-6">
+                            <input type="amount" [(ngModel)]="accountDet.amount" placeholder="enter the amount"  class="form-control" name="amount" required>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 offset-md-4">
+                        <button type="submit" (click)="createAccount()" class="btn btn-primary">
+                            Create
+                        </button>
+                        
+                    </div>
+            
+            </form>
+                </div>
+                <div class="create" *ngIf = "account.account_preferences === 'savings'">
+                    <div>Savings Account</div>
+                    <form action="" class="form" method="">
+                        <div class="form-group row">
+                            <label for="password" class="col-md-4 col-form-label text-md-right">User Id</label>
+                            <div class="col-md-6">
+                                <input type="text" [(ngModel)]="accountDet.id" placeholder="enter the id"  class="form-control" name="id" required>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="email_address" class="col-md-4 col-form-label text-md-right">Account Number</label>
+                            <div class="col-md-6">
+                                <input type="text" [(ngModel)]="accountDet.acc_no"  placeholder="account_no" class="form-control" name="account_no" required autofocus>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="type" class="col-md-4 col-form-label text-md-right">Type</label>
+                            <div class="col-md-6">
+                                <input type="text" [(ngModel)]="accountDet.type"  placeholder="type please" value="savings" class="form-control" name="type" required>
+                            </div>
+                        </div>
+
+                    <div class="form-group row">
+                        <label for="email_address" class="col-md-4 col-form-label text-md-right">Rate of interest</label>
+                        <div class="col-md-6">
+                            <select class="form-control" [(ngModel)]="accountDet.roi"   name = 'Rate of interest' placeholder="Rate of interest" class="form-control" required autofocus>
+                                <option class="acc-options">6.0</option>
+                                <option class="acc-options">5.7</option>
+                             </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="password" class="col-md-4 col-form-label text-md-right">Principle Amount</label>
+                        <div class="col-md-6">
+                            <input type="amount" [(ngModel)]="accountDet.amount"  placeholder="enter the amount"  class="form-control" name="amount" required>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 offset-md-4">
+                        <button type="submit" (click)="createAccount()" class="btn btn-primary">
+                            Create
+                        </button>
+                        
+                    </div>
+            
+            </form>
+                </div>
+          </div>
+        </div>
+    </div>
+</div>

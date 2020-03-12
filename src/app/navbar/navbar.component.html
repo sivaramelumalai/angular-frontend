@@ -1,0 +1,105 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" data-toggle="tooltip" data-placement="top" title="Tooltip on top" href="#">
+                <img src="../../assets/images/bank logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
+                Code Bank
+              </a>
+       
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            
+            <li class="nav-item">
+                          </li>
+            
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Explore Products
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="#">Debit card</a>
+                <a class="dropdown-item" href="#">Crdit card</a>
+                <a class="dropdown-item" href="#">Loans/Credit</a>
+                <a class="dropdown-item" href="#">Mobile Banking</a>
+                <a class="dropdown-item" href="#">Busines services</a>
+              </div>
+            </li>
+            <li class="nav-item">
+                <ul class="navbar-nav">
+                        <li class="nav-item">
+                                <button type="button" *ngIf= "!_auth.loggedIn()" routerLink = "/login" class="btn btn-outline-primary">Log In</button>
+                                <button type="button" *ngIf= "_auth.loggedIn()" (click) = "_auth.logoutUser()" class="btn btn-outline-primary">Log Out</button>
+
+                              </li>
+                            <li class="nav-item">
+                                <button type="button" *ngIf= "!_auth.loggedIn()" routerLink = "/user-register" class="btn btn-primary">Apply Now</button>
+                            </li>
+                </ul>
+                    
+
+            </li>
+            
+          </ul>
+        </div>
+      </nav>
+      <nav class="navbar navbar-expand-lg navbar-light bg-dark fixed-top">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+              <div class="navbar-nav">
+                    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                            <ul class="navbar-nav">
+                              <li class="nav-item ">
+                                    <a class="nav-link" href="#" id="navbarDropdownMenuLink" *ngIf = "checkCustomer()" routerLink='/summary' role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            YourAccounts
+                                    </a>
+                                    <a class="nav-link" href="#" id="navbarDropdownMenuLink" *ngIf = "checkBanker()" routerLink='/all-users' role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                      Accounts
+                                    </a>
+                                  </li>
+                              <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            Pay&Transfer
+                                          </a>
+                                          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                            <a class="dropdown-item" href="#" routerLink = "/transfer">Transfer money</a>
+                                            <a class="dropdown-item" href="#">pay bills</a>
+                                            <a class="dropdown-item" routerLink='/payments' href="#">Payment activity</a>
+                                          </div>
+                              </li>
+                              <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            collect&Deposit
+                                          </a>
+                                          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                            <a class="dropdown-item" href="#">Deposit details</a>
+                                            <a class="dropdown-item" href="#">Credit</a>
+                                            <a class="dropdown-item" href="#">Balance</a>
+                                          </div>
+                              </li>
+                              <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                  AccountManagement
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                  <a class="dropdown-item" href="#">Action</a>
+                                  <a class="dropdown-item" href="#">Another action</a>
+                                  <a class="dropdown-item" href="#">Something else here</a>
+                                </div>
+                              </li>
+                            </ul>
+                          </div>
+                <!-- <a class="nav-item nav-link" href="#">Accounts <span class="sr-only">(current)</span></a>
+                <a class="nav-item nav-link" href="#">Pay&Transfer</a>
+                <a class="nav-item nav-link" href="#">Collect&Transfer</a>
+                <a class="nav-item nav-link" href="#">AccountManagement</a> -->
+              </div>
+            </div>
+          </nav>
+
+
+
+
+          
